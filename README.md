@@ -1,2 +1,2 @@
 # Eonesii.github.io
-Website for AME 220
+Website for AME 220.
