@@ -1,0 +1,145 @@
+
+/*
+<weight>: Use a value from 400 to 900
+<uniquifier>: Use a unique and descriptive class name
+
+.orbitron-<uniquifier> {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+/*
+<weight>: Use a value from 100 to 900
+<uniquifier>: Use a unique and descriptive class name
+
+.big-shoulders-<uniquifier> {
+  font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+
+* {
+    --base: #3b302cff;
+    --borderColor: #938274ff;
+    --accentColor: #ffe15aff;
+    --textColor: #dadff7ff;
+    --cardColor: #211b19ff;
+}
+
+body {
+    background-color: var(--base);
+    background-image: url('./Assets/CSS-GraphPaper-Pattern_LB.png');
+
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    margin: 0;
+
+    text-align: center;
+
+}
+
+header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    margin-bottom: 32px;
+
+    color: var(--accentColor);
+    font-family: "Orbitron", sans-serif;
+    font-weight: 650;
+    font-size: 64px; 
+    line-height: 1.5;
+
+    background-color: var(--base);
+    opacity: .95;
+}
+
+.title {
+    margin-bottom: 32px;
+
+    color: var(--textColor);
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 70px;
+}
+
+.title::first-line {
+    color: var(--accentColor);
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 70px;
+}
+
+h2 {
+    color: var(--textColor);
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 70px;
+
+    text-transform: capitalize;
+
+    text-shadow: 3px 2px 2px var(--accentColor);
+}
+
+.game-cards div {
+    padding: 16px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+
+    background-color: var(--cardColor);
+
+    border: 3px solid var(--borderColor);
+    border-radius: 16px;
+
+    transition: all 1s;
+}
+
+.game-cards div:hover {
+    box-shadow: 6px 6px 2px var(--accentColor);
+}
+
+.game-cards div > img {
+    width: 65%;
+    height: 430px;
+    object-fit: cover;
+
+    border: 2px solid var(--borderColor);
+    border-radius: 16px;
+}
+
+h3 {
+    color: var(--textColor);
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+
+    text-decoration: underline;
+    text-decoration-color: var(--accentColor);
+}
+
+h4 {
+    color: var(--textColor);
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+p {
+    color: var(--textColor);
+    font-family: "Big Shoulders", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
