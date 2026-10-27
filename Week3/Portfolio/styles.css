@@ -60,6 +60,9 @@ header {
 
     background-color: var(--base);
     opacity: .95;
+
+    border: 1px solid var(--baseColor);
+    border-radius: 16px;
 }
 
 .title {
@@ -107,7 +110,7 @@ h2 {
     transition: all 1s;
 }
 
-.game-cards div:hover {
+.game-cards div: hover {
     box-shadow: 6px 6px 2px var(--accentColor);
 }
 
