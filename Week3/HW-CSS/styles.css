@@ -55,6 +55,8 @@ body {
     border-radius: 12px;
     border: 8px solid var(--accentColor);
 
+    box-sizing: border-box;
+
     margin-bottom: 12px;
 }
 
@@ -100,7 +102,7 @@ h1 {
     line-height: 1.5;
 }
 
-button {
+.card-button {
     background-color: var(--imagebackground);
     
     width: 20%;
@@ -111,4 +113,17 @@ button {
     font-weight: 650;
     font-size: 20px; 
     line-height: 1.5;
+}
+
+.card-button:hover {
+    background-color: var(--accentColor);
+    color: var(--cardColor);
+    cursor: pointer;
+}
+
+.card-button:active {
+    background-color: var(--itemAbilityColor);
+    color: var(--cardColor);
+
+    transform: scale(0.9);
 }
