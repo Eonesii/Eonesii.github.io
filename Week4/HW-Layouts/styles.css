@@ -1,0 +1,366 @@
+
+* {
+
+    --backgroundColor: #1a1411;
+    --secondaryColor: #231c18;
+    --buttonColor: #605247;
+    --buttonHoverColor: #8c7b6e;
+    --buttonSelectedColor: #a30000;
+    --slotBackgroundColor: #312b25;
+    --textColor: #ddcfc8;
+
+    font-size: 16px;
+
+}
+
+body {
+
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav {
+
+    background-color: var(--secondaryColor);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 32px;
+
+    width: 100vw;
+    height: 96px;
+
+}
+
+nav > img { 
+
+  height: 60px; 
+  width: 60px; 
+
+}
+
+input[type="radio"] {
+
+    display: none;
+
+}
+
+.classButtons {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    gap: 16px;
+
+}
+
+.classButtons > label {
+
+    background-color: var(--buttonColor);
+    color: var(--textColor);
+
+    display: inline-block;
+
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    padding: 4px 24px;
+
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+div > label:hover {
+
+    background-color: var(--buttonHoverColor);
+
+}
+
+div > label:active {
+
+    background-color: var(--buttonSelectedColor);
+
+}
+
+input {
+
+    margin-top: 80px;
+
+}
+
+.who {
+
+    display: flex;
+    justify-content: center;
+
+    width: 100vw;
+
+}
+
+.who #className {
+
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+
+}
+
+.inventory {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.SlotsGrid {
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 4px;
+
+    width: 100%;
+
+}
+
+.slots {
+
+    background-color: var(--slotBackgroundColor);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    border-radius: 8px;
+    padding: 12px;
+
+}
+
+.slots img {
+
+    width: 100%;
+    object-fit: contain;
+
+}
+
+#ClassFullBody {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Spy */
+
+#spy:checked ~ .who #className::after {
+    content: "Spy";
+}
+
+#spy:checked ~ .inventory .SlotsGrid #slot1 img {
+    content: url("./Assets/Spy/Primary_Spy.png")
+}
+
+#spy:checked ~ .inventory .SlotsGrid #slot2 img {
+    content: url("./Assets/Spy/CosSlot1_Spy.png")
+}
+
+#spy:checked ~ .inventory .SlotsGrid #slot3 img {
+    content: url("./Assets/Spy/Secondary_Spy.png")
+}
+
+#spy:checked ~ .inventory .SlotsGrid #slot4 img {
+    content: url("./Assets/Spy/CosSlot2_Spy.png")
+}
+
+#spy:checked ~ .inventory .SlotsGrid #slot5 img {
+    content: url("./Assets/Spy/Third_Spy.png")
+}
+
+#spy:checked ~ .inventory .SlotsGrid #slot6 img {
+    content: url("./Assets/Spy/CosSlot3_Spy.png")
+}
+
+#spy:checked ~ .inventory #ClassFullBody img {
+    content: url("./Assets/Spy/SpyPic.png")
+}
+
+/* Sniper */
+
+#sniper:checked ~ .who #className::after {
+    content: "Sniper";
+}
+
+#sniper:checked ~ .inventory .SlotsGrid #slot1 img {
+    content: url("./Assets/Sniper/Primary_Sniper.png")
+}
+
+#sniper:checked ~ .inventory .SlotsGrid #slot2 img {
+    content: url("./Assets/Sniper/CosSlot1_Sniper.png")
+}
+
+#sniper:checked ~ .inventory .SlotsGrid #slot3 img {
+    content: url("./Assets/Sniper/Secondary_Sniper.png")
+}
+
+#sniper:checked ~ .inventory .SlotsGrid #slot4 img {
+    content: url("./Assets/Sniper/CosSlot2_Sniper.png")
+}
+
+#sniper:checked ~ .inventory .SlotsGrid #slot5 img {
+    content: url("./Assets/Sniper/Melee_Sniper.png")
+}
+
+#sniper:checked ~ .inventory .SlotsGrid #slot6 img {
+    content: url("./Assets/Sniper/CosSlot3_Sniper.png")
+}
+
+#sniper:checked ~ .inventory #ClassFullBody img {
+    content: url("./Assets/Sniper/SniperPic.png")
+}
+
+/* Soldier */
+
+#soldier:checked ~ .who #className::after {
+    content: "Soldier";
+}
+
+#soldier:checked ~ .inventory .SlotsGrid #slot1 img {
+    content: url("./Assets/Soldier/Primary_Soldier.png")
+}
+
+#soldier:checked ~ .inventory .SlotsGrid #slot2 img {
+    content: url("./Assets/Soldier/CosSlot1_Soldier.png")
+}
+
+#soldier:checked ~ .inventory .SlotsGrid #slot3 img {
+    content: url("./Assets/Soldier/Secondary_Soldier.png")
+}
+
+#soldier:checked ~ .inventory .SlotsGrid #slot4 img {
+    content: url("./Assets/Soldier/CosSlot2_Soldier.png")
+}
+
+#soldier:checked ~ .inventory .SlotsGrid #slot5 img {
+    content: url("./Assets/Soldier/Melee_Soldier.png")
+}
+
+#soldier:checked ~ .inventory .SlotsGrid #slot6 img {
+    content: url("./Assets/Soldier/CosSlot3_Soldier.png")
+}
+
+#soldier:checked ~ .inventory #ClassFullBody img {
+    content: url("./Assets/Soldier/SoldierPic.png")
+}
+
+/* Scout */
+
+#scout:checked ~ .who #className::after {
+    content: "Scout";
+}
+
+#scout:checked ~ .inventory .SlotsGrid #slot1 img {
+    content: url("./Assets/Scout/Primary_Scout.png")
+}
+
+#scout:checked ~ .inventory .SlotsGrid #slot2 img {
+    content: url("./Assets/Scout/CosSlot1_Scout.png")
+}
+
+#scout:checked ~ .inventory .SlotsGrid #slot3 img {
+    content: url("./Assets/Scout/Secondary_Scout.png")
+}
+
+#scout:checked ~ .inventory .SlotsGrid #slot4 img {
+    content: url("./Assets/Scout/CosSlot2_Scout.png")
+}
+
+#scout:checked ~ .inventory .SlotsGrid #slot5 img {
+    content: url("./Assets/Scout/Melee_Scout.png")
+}
+
+#scout:checked ~ .inventory .SlotsGrid #slot6 img {
+    content: url("./Assets/Scout/CosSlot3_Scout.png")
+}
+
+#scout:checked ~ .inventory #ClassFullBody img {
+    content: url("./Assets/Scout/ScoutPic.png")
+}
+
+@media screen and (max-width: 720px) {
+
+    * {
+        font-size: 12px;
+    }
+
+    nav {
+
+        background-color: var(--secondaryColor);
+
+        position: sticky;
+        top: 0;
+
+        z-index: 10;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 24px;
+
+        width: 100vw;
+        height: 96px;
+
+    }
+
+    .classButtons > label {
+
+        font-family: "Big Shoulders", sans-serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+
+    }
+
+    .inventory {
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    #ClassFullBody {
+
+        order: 1;
+
+    }
+
+    .SlotsGrid {
+
+        order: 2;
+        width: 80vw;
+        
+        margin-bottom: 48px;
+
+    }
+    
+}
