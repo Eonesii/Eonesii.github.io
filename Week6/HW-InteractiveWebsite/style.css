@@ -1,0 +1,121 @@
+
+* {
+
+    --lightMode: #FFFFFF;
+    --darkMode: #26272e;
+
+    font-size: 20px;
+    font-family: "Big Shoulders", sans-serif;
+
+}
+
+body {
+
+    background-color: var(--lightMode);
+    color: black;
+
+}
+
+body.dark {
+
+    background-color: var(--darkMode);
+    color: white;
+
+}
+
+h1, h2, p {
+
+    text-align: center;
+
+}
+
+#colorBox {
+
+    background-color: var(--lightMode);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 75vw;
+    height: 30vh;
+
+    margin: 30px auto;
+    border-radius: 12px;
+    border: 2px solid #dadada;
+
+    transition: transform 0.3s ease;
+
+}
+
+#colorCode {
+
+    background-color: var(--lightMode);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 7vw;
+    height: 4vh;
+
+    border-radius: 8px;
+
+}
+
+body.dark #colorCode {
+
+    background-color: var(--darkMode);
+    color: white;
+
+}
+
+.buttonContainer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+button {
+
+    background-color: var(--darkMode);
+    color: white;
+
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 2px solid #dadada;
+
+    cursor: pointer;
+
+}
+
+#savedColors {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 10px;
+    margin-top: 20px;
+
+}
+
+#savedColors div {
+
+    width: 15vw;
+    height: 15vh;
+
+    border-radius: 10px;
+    border: 2px solid #dadada;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    
+}
